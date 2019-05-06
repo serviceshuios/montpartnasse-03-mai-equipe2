@@ -18,7 +18,7 @@ public class RoutiereController {
     @RequestMapping(value = "/routiere", method = RequestMethod.GET)
     public String lister(Model model) {
         model.addAttribute("routiere", new Routiere());
-        model.addAttribute("routieres", service.findAllRoutiere());
+        model.addAttribute("routieres", service.findAllRoutieres());
         return "routieres";
     }
 
@@ -27,12 +27,12 @@ public class RoutiereController {
         if (routiere.getIdCargaison() == 0) {
             service.ajouterRoutiere(routiere);
             model.addAttribute("routiere", new Routiere());
-            model.addAttribute("routieres", service.findAllRoutiere());
+            model.addAttribute("routieres", service.findAllRoutieres());
             return "routieres";
         } else {
             service.modifierRoutiere(routiere);
             model.addAttribute("routiere", new Routiere());
-            model.addAttribute("routieres", service.findAllRoutiere());
+            model.addAttribute("routieres", service.findAllRoutieres());
             return "routieres";
         }
     }
@@ -40,14 +40,14 @@ public class RoutiereController {
     public String delete(@RequestParam int idCargaison, Model model) {
         service.supprimerRoutiere(idCargaison);
         model.addAttribute("routiere", new Routiere());
-        model.addAttribute("routieres", service.findAllRoutiere());
+        model.addAttribute("routieres", service.findAllRoutieres());
         return "routieres";
     }
 
     @RequestMapping(value = "/editRoutiere")
     public String edit(@RequestParam int idCargaison, Model model) {
         model.addAttribute("routiere", service.getRoutiere(idCargaison));
-        model.addAttribute("routieres", service.findAllRoutiere());
+        model.addAttribute("routieres", service.findAllRoutieres());
         return "routieres";
     }
 
