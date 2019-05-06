@@ -18,6 +18,21 @@
             <tr>
                     <td><f:hidden path="idCargaison"/> </td>
                 </tr>
+                 <tr>
+                    <td>NOMCARGAISON:</td>
+                    <td><f:input path="nomCargaison" /></td>
+                    <td><f:errors path="nomCargaison" cssClass="error"/></td>
+                </tr>
+                 <tr>
+                    <td>DEPART:</td>
+                    <td><f:input path="depart" /></td>
+                    <td><f:errors path="depart" cssClass="error"/></td>
+                </tr>
+                 <tr>
+                    <td>DESTINATION:</td>
+                    <td><f:input path="destination" /></td>
+                    <td><f:errors path="destination" cssClass="error"/></td>
+                </tr>
                 
                 
                 <tr>

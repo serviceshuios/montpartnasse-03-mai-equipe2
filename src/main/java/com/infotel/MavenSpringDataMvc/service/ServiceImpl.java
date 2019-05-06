@@ -4,12 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.infotel.MavenSpringDataMvc.dao.AerienneRepository;
 import com.infotel.MavenSpringDataMvc.dao.RoutiereRepository;
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
-
+@Service
 public class ServiceImpl implements Iservice {
     @Autowired
 	RoutiereRepository routiereRepository;
