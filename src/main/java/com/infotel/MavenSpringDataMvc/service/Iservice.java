@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
+import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 
 
 
@@ -24,5 +25,10 @@ public interface Iservice {
 	public void supprimerAerienne(int idCargaison);
 	public List<Aerienne> findAllAeriennes();
    
-	
+	public SocieteTransport ajouterSocieteTransport(SocieteTransport s);
+	public SocieteTransport affichageSocieteTransport(int idSociete);
+	public SocieteTransport getSocieteTransport(int idSociete);
+	public SocieteTransport modifierSocieteTransport( SocieteTransport s);
+	public void supprimerSocieteTransport(int idSociete);
+	public List<SocieteTransport> findAllSocieteTransports();
 }

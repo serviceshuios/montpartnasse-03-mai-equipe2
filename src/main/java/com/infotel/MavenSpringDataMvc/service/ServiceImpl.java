@@ -8,15 +8,31 @@ import org.springframework.stereotype.Service;
 
 import com.infotel.MavenSpringDataMvc.dao.AerienneRepository;
 import com.infotel.MavenSpringDataMvc.dao.RoutiereRepository;
+import com.infotel.MavenSpringDataMvc.dao.SocieteTransportRepository;
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
+<<<<<<< HEAD
+=======
+import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
+
+>>>>>>> 2e15f25a6748835fbde4e22466e5b43dba95644b
 @Service
 public class ServiceImpl implements Iservice {
     @Autowired
 	RoutiereRepository routiereRepository;
     @Autowired 
     AerienneRepository aerienneRepository;
+    @Autowired
+    SocieteTransportRepository societeTransportRepository;
     
+
+	public SocieteTransportRepository getSocieteTransportRepository() {
+		return societeTransportRepository;
+	}
+
+	public void setSocieteTransportRepository(SocieteTransportRepository societeTransportRepository) {
+		this.societeTransportRepository = societeTransportRepository;
+	}
 
 	public AerienneRepository getAerienneRepository() {
 		return aerienneRepository;
@@ -108,5 +124,40 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		return aerienneRepository.findAll();	
 		}
+
+	@Override
+	public SocieteTransport ajouterSocieteTransport(SocieteTransport s) {
+		// TODO Auto-generated method stub
+		return societeTransportRepository.save(s);
+	}
+
+	@Override
+	public SocieteTransport affichageSocieteTransport(int idSociete) {
+		// TODO Auto-generated method stub
+		return societeTransportRepository.findById(idSociete).get();
+	}
+
+	@Override
+	public SocieteTransport getSocieteTransport(int idSociete) {
+		// TODO Auto-generated method stub
+		return societeTransportRepository.findById(idSociete).get();
+	}
+
+	@Override
+	public SocieteTransport modifierSocieteTransport(SocieteTransport s) {
+		// TODO Auto-generated method stub
+		return societeTransportRepository.save(s);
+	}
+
+	@Override
+	public void supprimerSocieteTransport(int idSociete) {
+		// TODO Auto-generated method stub
+		societeTransportRepository.deleteById(idSociete);
+	}
+
+	@Override
+	public List<SocieteTransport> findAllSocieteTransports() {
+		// TODO Auto-generated method stub
+		return societeTransportRepository.findAll();	}
 
 }
