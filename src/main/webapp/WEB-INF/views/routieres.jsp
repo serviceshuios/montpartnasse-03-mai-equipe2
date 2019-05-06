@@ -66,8 +66,8 @@
                     <td>${r.immatriculation}</td>
                     <td>${r.peage}</td>
                     
-                    <td><a href="deleteRoutiere?id=${r.idCargaison}">supprimer</a></td>
-                    <td><a href="editRoutiere?id=${r.idCargaison}">editer</a></td>
+                    <td><a href="deleteRoutiere?idCargaison=${r.idCargaison}">supprimer</a></td>
+                    <td><a href="editRoutiere?idCargaison=${r.idCargaison}">editer</a></td>
                 </tr>
             </c:forEach>
         </table>
