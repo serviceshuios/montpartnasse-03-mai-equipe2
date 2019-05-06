@@ -53,7 +53,6 @@ public class ServiceImpl implements Iservice {
 		return routiereRepository.findById(idCargaison).get();
 	}
 	
-
 	@Override
 	public Routiere getRoutiere(int idCargaison) {
 		// TODO Auto-generated method stub

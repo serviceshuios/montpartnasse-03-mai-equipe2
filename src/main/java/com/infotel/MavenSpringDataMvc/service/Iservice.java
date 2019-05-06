@@ -17,6 +17,5 @@ public interface Iservice {
 	public void supprimerRoutiere(int idCargaison);
 	public List<Routiere> findAllRoutieres();
 	
-   
-	
+   	
 }
