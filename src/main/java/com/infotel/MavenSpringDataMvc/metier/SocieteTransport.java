@@ -20,7 +20,7 @@ public class SocieteTransport {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idSociete;
-	private int nomSociete;
+	private String nomSociete;
 	private String numSiret;
 	private Date dateCreation;
 	
@@ -32,11 +32,11 @@ public class SocieteTransport {
 		this.idSociete = idSociete;
 	}
 
-	public int getNomSociete() {
+	public String getNomSociete() {
 		return nomSociete;
 	}
 
-	public void setNomSociete(int nomSociete) {
+	public void setNomSociete(String nomSociete) {
 		this.nomSociete = nomSociete;
 	}
 

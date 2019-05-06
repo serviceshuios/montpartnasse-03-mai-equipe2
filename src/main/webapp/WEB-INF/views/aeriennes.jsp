@@ -16,7 +16,7 @@
         <f:form modelAttribute="aerienne" method="POST" action="saveAerienne">
             <table>
             <tr>
-                    <td><f:hidden path="idCargaison"/> </td>
+        <td><f:hidden path="idCargaison"/> </td>
                 </tr>
                  <tr>
                     <td>NOMCARGAISON:</td>
@@ -45,6 +45,7 @@
                     <td><f:input path="taxe" /></td>
                     <td><f:errors path="taxe" cssClass="error"/></td>
                 </tr>
+
                 
                 <tr>
                     <td><input type="submit" value="enregistrer" /></td>
@@ -52,10 +53,13 @@
             </table>
         </f:form>
     </div>
+     
     <div id="listProduits">
         <table class="table1">
             <tr>
-                
+                 <th>NOMCARGAISON</th>
+                <th>DEPART</th>
+                <th>DESTINATION</th>
                 <th>NumVol</th>
                 <th>TAXE</th>
                 
@@ -64,9 +68,9 @@
             </tr>
             <c:forEach var="a" items="${aeriennes}">
                 <tr>
-                <td>${r.nomCargaison}</td>
-                <td>${r.depart}</td>
-                <td>${r.destination}</td>
+                <td>${a.nomCargaison}</td>
+                <td>${a.depart}</td>
+                <td>${a.destination}</td>
                     <td>${a.numVol}</td>
                     <td>${a.taxe}</td>
                     

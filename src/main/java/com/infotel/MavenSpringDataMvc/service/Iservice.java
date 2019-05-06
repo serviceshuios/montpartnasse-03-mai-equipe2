@@ -3,6 +3,8 @@ package com.infotel.MavenSpringDataMvc.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.repository.query.Param;
+
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
@@ -31,4 +33,7 @@ public interface Iservice {
 	public SocieteTransport modifierSocieteTransport( SocieteTransport s);
 	public void supprimerSocieteTransport(int idSociete);
 	public List<SocieteTransport> findAllSocieteTransports();
+	
+	
+	
 }

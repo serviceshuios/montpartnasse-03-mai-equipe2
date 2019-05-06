@@ -55,8 +55,8 @@
                     <td>${s.nomSociete}</td>
                     <td>${s.numSiret}</td>
                     <td>${s.dateCreation}</td>
-                    <td><a href="deleteSocieteTransport?id=${s.idSociete}">supprimer</a></td>
-                    <td><a href="editSocieteTransport?id=${s.idSociete}">editer</a></td>
+                    <td><a href="deleteSocieteTransport?idSociete=${s.idSociete}">supprimer</a></td>
+                    <td><a href="editSocieteTransport?idSociete=${s.idSociete}">editer</a></td>
                 </tr>
             </c:forEach>
         </table>

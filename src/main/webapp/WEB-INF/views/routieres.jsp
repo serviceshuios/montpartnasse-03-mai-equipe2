@@ -54,7 +54,9 @@
     <div id="listProduits">
         <table class="table1">
             <tr>
-                
+                <th>NOMCARGAISON</th>
+                <th>DEPART</th>
+                <th>DESTINATION</th>
                 <th>IMMATRICULATION</th>
                 <th>PEAGE</th>
                 

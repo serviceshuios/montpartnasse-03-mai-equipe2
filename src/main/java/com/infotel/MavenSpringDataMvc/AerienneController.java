@@ -17,10 +17,19 @@ public class AerienneController {
 	@Autowired
     private Iservice service;
 
-    @RequestMapping(value = "/aerienne", method = RequestMethod.GET)
+	
+    public Iservice getService() {
+		return service;
+	}
+
+	public void setService(Iservice service) {
+		this.service = service;
+	}
+
+	@RequestMapping(value = "/aerienne", method = RequestMethod.GET)
     public String lister(Model model) {
         model.addAttribute("aerienne", new Aerienne());
-        model.addAttribute("aerienne", service.findAllAeriennes());
+        model.addAttribute("aeriennes", service.findAllAeriennes());
         return "aeriennes";
     }
 

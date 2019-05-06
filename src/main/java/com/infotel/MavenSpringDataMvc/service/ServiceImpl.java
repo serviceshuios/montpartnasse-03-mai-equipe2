@@ -1,21 +1,22 @@
 package com.infotel.MavenSpringDataMvc.service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.infotel.MavenSpringDataMvc.dao.AerienneRepository;
+
 import com.infotel.MavenSpringDataMvc.dao.RoutiereRepository;
 import com.infotel.MavenSpringDataMvc.dao.SocieteTransportRepository;
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
-<<<<<<< HEAD
-=======
+
+
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 
->>>>>>> 2e15f25a6748835fbde4e22466e5b43dba95644b
+
 @Service
 public class ServiceImpl implements Iservice {
     @Autowired
@@ -24,6 +25,7 @@ public class ServiceImpl implements Iservice {
     AerienneRepository aerienneRepository;
     @Autowired
     SocieteTransportRepository societeTransportRepository;
+    
     
 
 	public SocieteTransportRepository getSocieteTransportRepository() {
@@ -55,6 +57,8 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		return routiereRepository.save(r);
 	}
+
+	
 
 	
 
@@ -159,5 +163,7 @@ public class ServiceImpl implements Iservice {
 	public List<SocieteTransport> findAllSocieteTransports() {
 		// TODO Auto-generated method stub
 		return societeTransportRepository.findAll();	}
+
+	
 
 }
