@@ -5,13 +5,25 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.infotel.MavenSpringDataMvc.dao.AerienneRepository;
 import com.infotel.MavenSpringDataMvc.dao.RoutiereRepository;
-
+import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
 
 public class ServiceImpl implements Iservice {
     @Autowired
 	RoutiereRepository routiereRepository;
+    @Autowired 
+    AerienneRepository aerienneRepository;
+    
+
+	public AerienneRepository getAerienneRepository() {
+		return aerienneRepository;
+	}
+
+	public void setAerienneRepository(AerienneRepository aerienneRepository) {
+		this.aerienneRepository = aerienneRepository;
+	}
 
 	public RoutiereRepository getRoutiereRepository() {
 		return routiereRepository;
@@ -58,5 +70,42 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		return routiereRepository.findById(idCargaison).get();
 	}
+
+	@Override
+	public Aerienne ajouterAerienne(Aerienne a) {
+		// TODO Auto-generated method stub
+		return aerienneRepository.save(a);
+	}
+
+	@Override
+	public Aerienne affichageAerienne(int idCargaison) {
+		// TODO Auto-generated method stub
+		return aerienneRepository.findById(idCargaison).get();
+	}
+
+	@Override
+	public Aerienne getAerienne(int idCargaison) {
+		// TODO Auto-generated method stub
+		return aerienneRepository.findById(idCargaison).get();
+	}
+
+	@Override
+	public Aerienne modifierAerienne(Aerienne a) {
+		// TODO Auto-generated method stub
+		return aerienneRepository.save(a);
+	}
+
+	@Override
+	public void supprimerAerienne(int idCargaison) {
+		// TODO Auto-generated method stub
+		aerienneRepository.deleteById(idCargaison);
+		
+	}
+
+	@Override
+	public List<Aerienne> findAllAeriennes() {
+		// TODO Auto-generated method stub
+		return aerienneRepository.findAll();	
+		}
 
 }

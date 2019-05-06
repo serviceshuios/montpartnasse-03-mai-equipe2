@@ -3,7 +3,7 @@ package com.infotel.MavenSpringDataMvc.service;
 import java.util.List;
 import java.util.Optional;
 
-
+import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
 
 
@@ -17,5 +17,12 @@ public interface Iservice {
 	public void supprimerRoutiere(int idCargaison);
 	public List<Routiere> findAllRoutieres();
 	
-   	
+	public Aerienne ajouterAerienne(Aerienne a);
+	public Aerienne affichageAerienne(int idCargaison);
+	public Aerienne getAerienne(int idCargaison);
+	public Aerienne modifierAerienne( Aerienne a);
+	public void supprimerAerienne(int idCargaison);
+	public List<Aerienne> findAllAeriennes();
+   
+	
 }
