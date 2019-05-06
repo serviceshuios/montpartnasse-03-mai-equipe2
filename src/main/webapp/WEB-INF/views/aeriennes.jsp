@@ -64,6 +64,9 @@
             </tr>
             <c:forEach var="a" items="${aeriennes}">
                 <tr>
+                <td>${r.nomCargaison}</td>
+                <td>${r.depart}</td>
+                <td>${r.destination}</td>
                     <td>${a.numVol}</td>
                     <td>${a.taxe}</td>
                     

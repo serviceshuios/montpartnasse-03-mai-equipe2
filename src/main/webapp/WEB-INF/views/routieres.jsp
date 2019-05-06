@@ -63,6 +63,9 @@
             </tr>
             <c:forEach var="r" items="${routieres}">
                 <tr>
+                <td>${r.nomCargaison}</td>
+                <td>${r.depart}</td>
+                <td>${r.destination}</td>
                     <td>${r.immatriculation}</td>
                     <td>${r.peage}</td>
                     
