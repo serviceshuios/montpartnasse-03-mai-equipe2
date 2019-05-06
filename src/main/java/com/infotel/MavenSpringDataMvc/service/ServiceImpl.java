@@ -54,9 +54,9 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
-	public Optional<Routiere> getRoutiere(int idCargaison) {
+	public Routiere getRoutiere(int idCargaison) {
 		// TODO Auto-generated method stub
-		return null;
+		return routiereRepository.findById(idCargaison).get();
 	}
 
 }
