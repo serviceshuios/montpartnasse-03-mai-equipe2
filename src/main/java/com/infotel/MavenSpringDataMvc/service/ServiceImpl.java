@@ -25,6 +25,7 @@ public class ServiceImpl implements Iservice {
     AerienneRepository aerienneRepository;
     @Autowired
     SocieteTransportRepository societeTransportRepository;
+   
     
     
 
@@ -168,6 +169,13 @@ public class ServiceImpl implements Iservice {
 	public void ajouterCargaisonSociete(int idSociete, int idCargaison) {
 		// TODO Auto-generated method stub
 		aerienneRepository.ajouterCargaisonSociete(idSociete, idCargaison);
+		
+	}
+
+	@Override
+	public void ajouterCargaisonRoutiereSociete(int idSociete, int idCargaison) {
+		// TODO Auto-generated method stub
+		routiereRepository.ajouterCargaisonRoutiereSociete(idSociete, idCargaison);
 		
 	}
 

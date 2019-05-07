@@ -36,4 +36,5 @@ public interface Iservice {
 	
 	
 	public void ajouterCargaisonSociete(int idSociete ,int idCargaison);
+	public void ajouterCargaisonRoutiereSociete(int idSociete , int idCargaison);
 }
