@@ -35,5 +35,5 @@ public interface Iservice {
 	public List<SocieteTransport> findAllSocieteTransports();
 	
 	
-	
+	public void ajouterCargaisonSociete(int idSociete ,int idCargaison);
 }

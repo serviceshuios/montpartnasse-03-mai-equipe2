@@ -164,6 +164,13 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		return societeTransportRepository.findAll();	}
 
+	@Override
+	public void ajouterCargaisonSociete(int idSociete, int idCargaison) {
+		// TODO Auto-generated method stub
+		aerienneRepository.ajouterCargaisonSociete(idSociete, idCargaison);
+		
+	}
+
 	
 
 }
